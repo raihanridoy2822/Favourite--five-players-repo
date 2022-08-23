@@ -4,7 +4,10 @@ function display(players) {
     const tableBody = document.getElementById("player-source");
     tableBody.innerHTML = "";
     for (let i = 0; i < playerArray.length; i++) {
-        console.log(players[i].playerName);
+        if (playerArray.length >= 6) {
+            alert(message = 'five player already done');
+            break;
+        }
         const name = players[i].playerName;
         const tr = document.createElement("tr");
         tr.innerHTML = `
